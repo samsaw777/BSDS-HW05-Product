@@ -281,7 +281,14 @@ Each log entry contains information about the request, including the endpoint, r
 <!-- Add sample request logs here later -->
 
 ```json
-
+{"time":"2026-10-18T02:11:09.266906086Z","level":"INFO","msg":"request","method":"POST","route":"/products/:productId/details","path":"/products/1100/details","status":200,"duration_ms":0.03}
+{"time":"2026-10-18T02:11:09.266971503Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1200","status":200,"duration_ms":0.004}
+{"time":"2026-10-18T02:11:09.266977253Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1200","status":200,"duration_ms":0.004}
+{"time":"2026-10-18T02:11:09.267048586Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1100","status":200,"duration_ms":0.002}
+{"time":"2026-10-18T02:11:09.267072586Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1100","status":200,"duration_ms":0.851}
+{"time":"2026-10-18T02:11:09.26712342Z","level":"INFO","msg":"request","method":"POST","route":"/products/:productId/details","path":"/products/1400/details","status":200,"duration_ms":0.005}
+{"time":"2026-10-18T02:11:09.26712992Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1300","status":200,"duration_ms":0.006}
+{"time":"2026-10-18T02:11:09.267178461Z","level":"INFO","msg":"request","method":"GET","route":"/products/:productId","path":"/products/1400","status":200,"duration_ms":0.002}
 ```
 
 ### Comparing Grafana Metrics and Logs
