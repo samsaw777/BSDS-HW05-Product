@@ -185,33 +185,23 @@ For CPU utilization, I used the **Maximum** statistic with a **1-minute period**
 | 800 | ~3,400 | 210 ms | 390 ms | 500 ms | ~100% | 0% |
 
 <!-- ![Stress Test RPS](docs/images/locust-stress-rps.png) -->
-** 400 users, with no wait time **
+**400 users, with no wait time**
 
 <img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 59 37 PM" src="https://github.com/user-attachments/assets/59293889-68d7-440d-8a72-a2cf230d12db" />
 
 <img width="2844" height="1800" alt="total_requests_per_second_1792285178 557" src="https://github.com/user-attachments/assets/5c3e7c09-de34-4e98-8bcc-8e801a9101d9" />
 
-<img width="2844" height="1800" alt="response_times_(ms)_1792285178 576" src="https://github.com/user-attachments/assets/6a14c425-503d-47f1-8320-8bb7baa12691" />
-
-<img width="2844" height="1800" alt="number_of_users_1792285178 585" src="https://github.com/user-attachments/assets/ee6953a1-0980-409a-b41b-331df60ac597" />
 
 
-
-** 800 users, with no wait time **
+**800 users, with no wait time**
 
 <img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 59 37 PM" src="https://github.com/user-attachments/assets/d06b4708-7cf4-4935-81a5-eb2e9e21bebf" />
 
 <img width="2844" height="1800" alt="total_requests_per_second_1792285331 073" src="https://github.com/user-attachments/assets/02e25a8b-a929-4145-a214-000c291b958f" />
 
-<img width="2844" height="1800" alt="response_times_(ms)_1792285331 093" src="https://github.com/user-attachments/assets/01258c98-ae6b-4146-b405-e0b7b7035252" />
-
-<img width="2844" height="1800" alt="number_of_users_1792285331 102" src="https://github.com/user-attachments/assets/6f1e400d-83bb-4d31-af6f-6c0defa3f2d5" />
-
-
-
 <!-- ![CloudWatch CPU and Memory](docs/images/cloudwatch-cpu-memory.png) -->
 
-** CloudWatch CPU and Memory **
+**CloudWatch CPU and Memory**
 
 <img width="1470" height="804" alt="Screenshot 2026-10-17 at 9 05 28 PM" src="https://github.com/user-attachments/assets/1f3dcafa-68a4-4011-87f2-18c98ca7c8da" />
 
@@ -279,8 +269,20 @@ Both tests used the same request distribution and configuration so that the main
 | Failure Rate          | 0%       | 0%           |
 
 <!-- ![HttpUser Results](docs/images/locust-httpuser.png) -->
+**HttpUser Results**
+
+<img width="1470" height="803" alt="Screenshot 2026-10-17 at 9 18 26 PM" src="https://github.com/user-attachments/assets/af8bd951-e325-497f-8868-8d2334caa9b9" />
+
+<img width="1470" height="800" alt="Screenshot 2026-10-17 at 9 18 39 PM" src="https://github.com/user-attachments/assets/5d15f980-3825-455a-86d0-309bef004062" />
+
 
 <!-- ![FastHttpUser Results](docs/images/locust-fasthttpuser.png) -->
+**FastHttpUser Results**
+
+<img width="1470" height="801" alt="Screenshot 2026-10-17 at 9 21 32 PM" src="https://github.com/user-attachments/assets/f7dc88ad-d56f-4a39-8af4-90ef1b2b23b5" />
+
+<img width="1470" height="803" alt="Screenshot 2026-10-17 at 9 21 44 PM" src="https://github.com/user-attachments/assets/22cc9a21-8d5b-4806-b479-58c5148cd67b" />
+
 
 ### Observations
 
