@@ -98,6 +98,30 @@ I gradually increased the number of users and monitored the requests per second 
 | ECS CPU Usage        | Below 100%          |
 
 <!-- ![Baseline Load Test](docs/images/locust-baseline.png) -->
+<details>
+<summary>All baseline screenshots</summary>
+
+**10 users**
+<img width="1470" height="800" alt="Screenshot 2026-10-17 at 8 17 33 PM" src="https://github.com/user-attachments/assets/1b8c7036-c9ab-4dae-bb7b-a9e8d9aaece6" />
+
+
+**50 users**
+<img width="1470" height="800" alt="Screenshot 2026-10-17 at 8 21 25 PM" src="https://github.com/user-attachments/assets/8fc712db-d21b-4ec5-8eba-0ff01cf9539d" />
+
+
+**200 users**
+<img width="1470" height="805" alt="Screenshot 2026-10-17 at 8 30 13 PM" src="https://github.com/user-attachments/assets/48520531-e57c-40e3-9a72-84b96d1ec066" />
+
+
+
+**500 users**
+<img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 34 14 PM" src="https://github.com/user-attachments/assets/92f56728-9dec-4b22-a2b5-54c5eccc5446" />
+
+
+**1,000 users, 0.5 to 2 s wait time**
+<img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 43 04 PM" src="https://github.com/user-attachments/assets/b15cf78d-d21a-4a6c-8826-0f3ebce7f607" />
+
+</details>
 
 ### Observations
 
