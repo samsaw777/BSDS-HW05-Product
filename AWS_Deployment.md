@@ -234,6 +234,10 @@ The following screenshots show the ECS task running successfully and the API res
 ![ECS Task Running](docs/images/ecs-running.png)
 ![API Response on ECS](docs/images/ecs-api-response.png)
 -->
+<img width="1027" height="505" alt="Screenshot 2026-10-17 at 1 20 51 PM" src="https://github.com/user-attachments/assets/890a66bf-6380-40a8-ae4b-418c290d4026" />
 
+<img width="1032" height="614" alt="Screenshot 2026-10-17 at 1 26 33 PM" src="https://github.com/user-attachments/assets/24751644-23b5-4acb-8bea-e0860396a34c" />
+
+<img width="1470" height="799" alt="Screenshot 2026-10-17 at 8 45 52 PM" src="https://github.com/user-attachments/assets/00eda01d-791a-477b-ba7f-163ab0a4d37a" />
 
 
