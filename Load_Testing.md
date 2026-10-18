@@ -176,17 +176,47 @@ For CPU utilization, I used the **Maximum** statistic with a **1-minute period**
 
 ### Results
 
-| Concurrent Users | Requests/Second | ECS CPU Utilization |
-| ---------------- | --------------- | ------------------- |
-| 50               | ~480            | ~25%                |
-| 100              | ~960            | ~40%                |
-| 200              | ~1,900          | ~70%                |
-| 400              | ~3,200          | ~100%               |
-| 800              | ~3,450          | ~100%               |
+| Users | RPS | Median | p95 | p99 | ECS CPU | Failures |
+|---|---|---|---|---|---|---|
+| 50 | ~480 | 94 ms | 150 ms | 170 ms | ~25% | 0% |
+| 100 | ~950 | 95 ms | 150 ms | 170 ms | ~40% | 0% |
+| 200 | ~1,900 | 97 ms | 150 ms | 390 ms | ~70% | 0% |
+| 400 | ~3,180 | 100 ms | 200 ms | 260 ms | ~100% | 0% |
+| 800 | ~3,400 | 210 ms | 390 ms | 500 ms | ~100% | 0% |
 
 <!-- ![Stress Test RPS](docs/images/locust-stress-rps.png) -->
+** 400 users, with no wait time **
+
+<img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 59 37 PM" src="https://github.com/user-attachments/assets/59293889-68d7-440d-8a72-a2cf230d12db" />
+
+<img width="2844" height="1800" alt="total_requests_per_second_1792285178 557" src="https://github.com/user-attachments/assets/5c3e7c09-de34-4e98-8bcc-8e801a9101d9" />
+
+<img width="2844" height="1800" alt="response_times_(ms)_1792285178 576" src="https://github.com/user-attachments/assets/6a14c425-503d-47f1-8320-8bb7baa12691" />
+
+<img width="2844" height="1800" alt="number_of_users_1792285178 585" src="https://github.com/user-attachments/assets/ee6953a1-0980-409a-b41b-331df60ac597" />
+
+
+
+** 800 users, with no wait time **
+
+<img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 59 37 PM" src="https://github.com/user-attachments/assets/d06b4708-7cf4-4935-81a5-eb2e9e21bebf" />
+
+<img width="2844" height="1800" alt="total_requests_per_second_1792285331 073" src="https://github.com/user-attachments/assets/02e25a8b-a929-4145-a214-000c291b958f" />
+
+<img width="2844" height="1800" alt="response_times_(ms)_1792285331 093" src="https://github.com/user-attachments/assets/01258c98-ae6b-4146-b405-e0b7b7035252" />
+
+<img width="2844" height="1800" alt="number_of_users_1792285331 102" src="https://github.com/user-attachments/assets/6f1e400d-83bb-4d31-af6f-6c0defa3f2d5" />
+
+
 
 <!-- ![CloudWatch CPU and Memory](docs/images/cloudwatch-cpu-memory.png) -->
+
+** CloudWatch CPU and Memory **
+
+<img width="1470" height="804" alt="Screenshot 2026-10-17 at 9 05 28 PM" src="https://github.com/user-attachments/assets/1f3dcafa-68a4-4011-87f2-18c98ca7c8da" />
+
+<img width="1470" height="802" alt="Screenshot 2026-10-17 at 9 08 40 PM" src="https://github.com/user-attachments/assets/b8f0db54-7792-4e18-a29b-524643da261d" />
+
 
 ### Observations
 
