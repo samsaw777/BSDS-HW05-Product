@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # how often Prometheus reads /metrics
+
+scrape_configs:
+  - job_name: "product-service"
+    static_configs:
+      - targets: ["app:8080"] # the app container, on port 8080

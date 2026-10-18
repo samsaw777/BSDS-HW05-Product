@@ -2,3 +2,7 @@
 **.tfstate
 **.tfstate.*
 **/.terraform/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store

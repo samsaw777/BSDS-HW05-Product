@@ -34,6 +34,7 @@ module "ecs" {
   log_group_name     = module.logging.log_group_name
   ecs_count          = var.ecs_count
   region             = var.aws_region
+  depends_on         = [docker_registry_image.app]
 }
 
 
@@ -46,6 +47,11 @@ resource "docker_image" "app" {
     # relative path from terraform/ → src/
     context = "../src"
     # Dockerfile defaults to "Dockerfile" in that context
+    platform = "linux/amd64"
+  }
+
+  triggers = {
+    src_hash = sha1(join("", [for f in fileset("../src", "*") : filesha1("../src/${f}")]))
   }
 }
 
