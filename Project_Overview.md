@@ -345,3 +345,9 @@ Below are the screenshots of the API responses tested against the deployed ECS s
 
 <img width="730" height="794" alt="Screenshot 2026-10-17 at 9 42 18 PM" src="https://github.com/user-attachments/assets/ff3f3455-1baf-4381-a953-56d2c9382d1e" />
 
+<img width="730" height="794" alt="Screenshot 2026-10-17 at 9 42 18 PM" src="https://github.com/user-attachments/assets/f815d0d0-aa55-4714-9c51-c505dccb08a1" />
+
+<img width="730" height="794" alt="Screenshot 2026-10-17 at 9 42 18 PM" src="https://github.com/user-attachments/assets/88682694-1495-4572-afda-a1051c8a94c4" />
+
+<img width="730" height="794" alt="Screenshot 2026-10-17 at 9 42 18 PM" src="https://github.com/user-attachments/assets/e7019ea6-3a51-4e1b-8c79-60b3a3295d52" />
+
