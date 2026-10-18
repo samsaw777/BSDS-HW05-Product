@@ -342,3 +342,6 @@ Below are the screenshots of the API responses tested against the deployed ECS s
 ![GET 404](docs/images/get-404.png)
 ![POST 204](docs/images/post-204.png)
 -->
+
+<img width="730" height="794" alt="Screenshot 2026-10-17 at 9 42 18 PM" src="https://github.com/user-attachments/assets/ff3f3455-1baf-4381-a953-56d2c9382d1e" />
+
