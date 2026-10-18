@@ -97,8 +97,7 @@ I gradually increased the number of users and monitored the requests per second 
 | Failure Rate         | 0%                  |
 | ECS CPU Usage        | Below 100%          |
 
-<!-- ![Baseline Load Test](docs/images/locust-baseline.png) -->
-<details>
+
 <summary>All baseline screenshots</summary>
 
 **10 users**
@@ -121,7 +120,6 @@ I gradually increased the number of users and monitored the requests per second 
 **1,000 users, 0.5 to 2 s wait time**
 <img width="1470" height="802" alt="Screenshot 2026-10-17 at 8 43 04 PM" src="https://github.com/user-attachments/assets/b15cf78d-d21a-4a6c-8826-0f3ebce7f607" />
 
-</details>
 
 ### Observations
 
