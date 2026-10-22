@@ -13,4 +13,5 @@ WORKDIR /app
 COPY --from=build /app/product-service .
 
 EXPOSE 8080
+ENV GOMEMLIMIT=400MiB
 CMD [ "./product-service" ]

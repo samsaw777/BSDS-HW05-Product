@@ -8,6 +8,9 @@ import (
 )
 
 func main(){
+
+	generateProducts(1000000)
+
 	router := gin.New()
 	router.Use(loggingMiddleware()) 
 	router.Use(metricsMiddleware()) 
@@ -18,7 +21,10 @@ func main(){
 			"details": "An unexpected error occurred",
 		})
 	}))
+
 	router.GET("/metrics", gin.WrapH(promhttp.Handler()))
+	router.GET("/health", healthHandler)
+	router.GET("/products/search", searchHandler)
 	router.GET("/products/:productId", getProducts)
 	router.POST("/products/:productId/details", updateProductsDetails)
 
