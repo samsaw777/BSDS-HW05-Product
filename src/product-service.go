@@ -115,7 +115,6 @@ func updateProductsDetails(c *gin.Context) {
 	products[id] = productDetail
 	mu.Unlock()
 
-    c.IndentedJSON(http.StatusOK, gin.H{
-        "message": "Product details added sucessfully!",
-    })
+  c.Status(http.StatusNoContent)
+
 }
