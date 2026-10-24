@@ -42,9 +42,21 @@ resource "aws_ecs_service" "this" {
   desired_count   = var.ecs_count
   launch_type     = "FARGATE"
 
+  health_check_grace_period_seconds = 60
+
   network_configuration {
     subnets         = var.subnet_ids
     security_groups = var.security_group_ids
     assign_public_ip = true
+  }
+
+  load_balancer {
+    target_group_arn = var.target_group_arn
+    container_name   = "${var.service_name}-container"
+    container_port   = var.container_port
+  }
+
+  lifecycle {
+    ignore_changes = [desired_count]
   }
 }

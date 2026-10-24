@@ -1,0 +1,2 @@
+Method,Name,Error,Occurrences,First Seen,Last Seen
+GET,/products/search,LocustBadStatusCode(code=503),21438,2026-10-24T16:36:34Z,2026-10-24T16:37:04Z

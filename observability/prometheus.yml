@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: "product-service"
     static_configs:
-      - targets: ["54.201.224.172:8080"] # the app container, on port 8080
+      - targets: ["44.246.229.212:8080", "35.93.200.129:8080"] # the app container, on port 8080
