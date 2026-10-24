@@ -7,3 +7,7 @@ output "ecs_service_name" {
   description = "Name of the running ECS service"
   value       = module.ecs.service_name
 }
+
+output "alb_dns_name" {
+  value = aws_lb.this.dns_name
+}

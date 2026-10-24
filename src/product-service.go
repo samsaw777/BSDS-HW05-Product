@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"strconv"
 	"sync"
@@ -11,6 +12,7 @@ import (
 
 type Product struct {
 	ProductID    int    `json:"product_id" binding:"required,min=1"`
+	Name 	     string `json:"name"`
 	SKU          string `json:"sku" binding:"required,min=1,max=100"`
 	Manufacturer string `json:"manufacturer" binding:"required,min=1,max=200"`
 	CategoryID   int    `json:"category_id" binding:"required,min=1"`
@@ -18,16 +20,26 @@ type Product struct {
 	SomeOtherID  int    `json:"some_other_id" binding:"required,min=1"`
 }
 
-var (
-	products = map[int]Product{
-		1100: {ProductID: 1100, SKU: "GO-1100", Manufacturer: "Go Server", CategoryID: 1, Weight: 500, SomeOtherID: 10},
-		1200: {ProductID: 1200, SKU: "TS-1200", Manufacturer: "Typescript", CategoryID: 20, Weight: 100, SomeOtherID: 14},
-		1300: {ProductID: 1300, SKU: "AMZ-1300", Manufacturer: "Amazon", CategoryID: 13, Weight: 200, SomeOtherID: 20},
-		1400: {ProductID: 1400, SKU: "NODE-1400", Manufacturer: "Node Server", CategoryID: 10, Weight: 200, SomeOtherID: 11},
-	}
-	mu sync.RWMutex
-)
+var products sync.Map
 
+var brands = []string{"Alpha", "Beta", "Gamma", "Delta", "Nova"}
+
+var categoryNames = []string{"Electronics","Books","Home","Sports","Toys","Clothing", "Garden","Beauty"}
+
+func generateProducts(n int){
+	for i := 1; i <= n; i++{
+		brand := brands[i % len(brands)]
+		products.Store(i, Product{
+			ProductID:    i,
+			Name:         fmt.Sprintf("Product %s %d", brand, i),
+			SKU:          fmt.Sprintf("SKU-%d", i),
+			Manufacturer: brand,
+			CategoryID:   (i % len(categoryNames)) + 1,
+			Weight:       100 + i%900,
+			SomeOtherID:  i,
+		})
+	}
+}
 func getProducts(c *gin.Context){
 
 	if c.GetHeader("X-Simulate-Error") == "true"{
@@ -45,9 +57,7 @@ func getProducts(c *gin.Context){
 		return
 	}
 
-	mu.RLock()
-	product, found := products[id]
-	mu.RUnlock()
+	v, found := products.Load(id)
 
 	if !found {
 		c.IndentedJSON(http.StatusNotFound, gin.H{
@@ -57,6 +67,8 @@ func getProducts(c *gin.Context){
 		})
 		return
 	}
+	
+	product := v.(Product)
 
 	c.IndentedJSON(http.StatusOK, product)
 }
@@ -77,10 +89,7 @@ func updateProductsDetails(c *gin.Context) {
 	}
 
 
-	mu.RLock()
-	_, found := products[id]
-	mu.RUnlock()
-	if !found {
+	if _, found := products.Load(id); !found {
 		c.IndentedJSON(http.StatusNotFound, gin.H{
 			"error":   "NOT_FOUND",
 			"message": "Product not found",
@@ -111,9 +120,7 @@ func updateProductsDetails(c *gin.Context) {
 	}
 
 
-	mu.Lock()
-	products[id] = productDetail
-	mu.Unlock()
+	products.Store(id, productDetail)
 
   c.Status(http.StatusNoContent)
 
